@@ -7,7 +7,10 @@ export default class Todo extends React.Component {
   render() {
     return (
       <div>
-        <h3 style={{textDecoration: this.props.todo.completed ? 'line-through' : ''}}>{this.props.todo.task}</h3>
+        <h3 style={{
+          textDecoration: this.props.todo.completed ? 'line-through' : '',
+          display: this.props.todo.hidden ? 'none' : 'block'
+          }}>{this.props.todo.task}</h3>
       </div>
     )
   }
